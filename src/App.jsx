@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 function App() {
   const dictionary = [
+
     { word: "React", meaning: "A JavaScript library for building user interfaces." },
+
     { word: "Component", meaning: "A reusable building block in React." },
+
     { word: "State", meaning: "An object that stores data for a component." }
-  ];
+
+];
 
   const [searchWord, setSearchWord] = useState("");
   const [definition, setDefinition] = useState(null);
@@ -31,13 +35,18 @@ function App() {
       {definition && (
         <div>
           {definition === "Word not found in the dictionary." ? (
-            <p>{definition}</p>
+            
+            <>
+              <h3>Definition:</h3>
+              <p>{definition}</p>
+            </>
           ) : (
             <>
               <h3>Definition:</h3>
               <p>{definition}</p>
             </>
           )}
+         
         </div>
       )}
     </div>
